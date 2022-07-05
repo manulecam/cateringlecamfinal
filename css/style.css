@@ -1,0 +1,537 @@
+* {
+  margin: 0;
+  padding: 0; }
+
+.g-header {
+  grid-area: gheader;
+  justify-self: center;
+  opacity: 0.8; }
+  .g-header a img {
+    max-width: 225px; }
+
+.g-header:hover {
+  opacity: 1; }
+
+@media only screen and (min-width: 1024px) {
+  .g-header {
+    grid-column: 1/4;
+    grid-row: 1/2; } }
+
+.g-nav {
+  grid-area: gnav;
+  justify-self: center;
+  align-self: center; }
+  .g-nav ul li {
+    list-style: none;
+    display: inline-block;
+    font-size: 10pt;
+    font-weight: bold;
+    padding: 7px;
+    margin: auto;
+    text-shadow: 2px 2px 3px #80645d; }
+    .g-nav ul li a {
+      text-decoration: none;
+      color: #8f6a5f; }
+    .g-nav ul li a:hover {
+      color: #80524a; }
+  .g-nav ul li:hover {
+    background-color: #ffc4b7;
+    transition: 0.8s; }
+
+@media only screen and (min-width: 1024px) {
+  .g-nav {
+    grid-column: 1/4;
+    grid-row: 2/3; }
+    .g-nav ul li {
+      font-size: 14pt; } }
+
+.g-footer {
+  grid-area: gfooter;
+  background-image: linear-gradient(white, #dca591);
+  text-align: center;
+  margin-bottom: -110px; }
+  .g-footer span a {
+    text-decoration: none; }
+  .g-footer span img {
+    max-width: 37.5px;
+    opacity: 0.7; }
+  .g-footer span img:hover {
+    opacity: 1;
+    transform: scale(1.25, 1.25);
+    transition: 0.25s; }
+  .g-footer p {
+    font-weight: bold;
+    color: #85685f;
+    font-size: 13pt;
+    margin-top: 10px;
+    text-shadow: 1.5px 1.5px 3.1px #e0c6be; }
+    .g-footer p img {
+      max-width: 15px; }
+    .g-footer p img:hover {
+      transform: scale(1.2, 1.2);
+      transition: 0.20s; }
+
+/* IDs de formato */
+#colorVerde:hover {
+  filter: invert(60%) sepia(77%) saturate(4309%) hue-rotate(92deg) brightness(110%) contrast(115%); }
+
+#colorRosa:hover {
+  filter: invert(53%) sepia(63%) saturate(4518%) hue-rotate(305deg) brightness(105%) contrast(101%); }
+
+#colorAzul:hover {
+  filter: invert(9%) sepia(99%) saturate(7498%) hue-rotate(248deg) brightness(86%) contrast(142%); }
+
+#colorRojo:hover {
+  filter: invert(22%) sepia(41%) saturate(6924%) hue-rotate(352deg) brightness(91%) contrast(135%); }
+
+#colorAmarillo:hover {
+  filter: invert(84%) sepia(98%) saturate(2099%) hue-rotate(356deg) brightness(107%) contrast(106%); }
+
+#colorPink:hover {
+  filter: invert(15%) sepia(97%) saturate(4903%) hue-rotate(325deg) brightness(101%) contrast(109%); }
+
+#copyright {
+  font-size: 7pt;
+  color: #41312d;
+  text-shadow: 1px 1px 2px #636363;
+  font-weight: bold; }
+
+#imagenFooter {
+  opacity: 0.7; }
+
+#imagenFooter:hover {
+  opacity: 1;
+  transform: scale(1.1, 1.1);
+  transition: 0.25s; }
+
+@media only screen and (min-width: 1024px) {
+  .g-footer {
+    grid-column: 1/4;
+    grid-row: 4/5; }
+    .g-footer p {
+      font-size: 16pt; } }
+
+#container {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 100px auto 100px;
+  grid-template-rows: 90px 40px 500px 200px;
+  grid-template-areas: "gheader gheader gheader" "gnav gnav gnav" "gmain gmain gmain" "gfooter gfooter gfooter"; }
+  #container main {
+    grid-area: gmain;
+    background-image: url(https://haedocatering.com.ar/usr/archivos/25_603fc0764490f.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    text-align: center; }
+    #container main h1 {
+      margin-top: 120px;
+      color: #f5b9a5;
+      font-size: 21.5pt;
+      text-shadow: 1px 1px 0.5px black; }
+    #container main p {
+      color: white;
+      font-weight: 600;
+      text-shadow: 1px 1px 0.5px black; }
+    #container main a {
+      text-decoration: none;
+      background-color: #dca591;
+      color: white;
+      padding: 7.5px;
+      font-size: 9pt;
+      font-weight: bold;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      text-shadow: 2px 2px 2px #555555; }
+    #container main a:hover {
+      background-color: #fde6de;
+      color: #a07d73;
+      transition: 0.3s; }
+
+@media only screen and (min-width: 1024px) {
+  #container {
+    grid-template-columns: repeat(3, 1fr); }
+    #container main {
+      grid-column: 1/4;
+      grid-row: 3/4; }
+      #container main h1 {
+        font-size: 32pt; }
+      #container main p {
+        font-size: 18pt; }
+      #container main a {
+        font-size: 12pt; } }
+
+#container-nos {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 90px 40px auto 200px;
+  grid-template-areas: "gheader gheader gheader" "gnav gnav gnav" "gmain gmain gmain" "gfooter gfooter gfooter"; }
+  #container-nos main {
+    grid-area: gmain;
+    background-image: url(https://images.alphacoders.com/118/thumb-1920-1188458.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    text-align: center; }
+    #container-nos main article {
+      display: inline-block;
+      width: 350px;
+      height: 500px;
+      background-size: cover;
+      opacity: 0.75; }
+      #container-nos main article img {
+        margin-top: 10px;
+        max-width: 320px;
+        border-radius: 8px; }
+      #container-nos main article h2 {
+        color: #55413c;
+        background-color: #fadfd6;
+        text-shadow: 2px 2px 2px #6b6b6b;
+        max-width: 320px;
+        margin-left: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px; }
+      #container-nos main article h2:hover {
+        color: #f58e75;
+        transition: 0.75s; }
+      #container-nos main article p {
+        color: #55413c;
+        font-weight: bold;
+        background-image: linear-gradient(#ffe6dd, #dda08a);
+        text-shadow: 1.2px 1.2px 2px #646464;
+        max-width: 320px;
+        margin-left: 15px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px; }
+        #container-nos main article p a {
+          text-decoration: none;
+          background-color: #ffc7b3;
+          color: white;
+          padding: 7.5px;
+          font-size: 9pt;
+          font-weight: bold;
+          border-radius: 10px; }
+        #container-nos main article p a:hover {
+          background-color: #fde6de;
+          color: #a07d73; }
+    #container-nos main article:hover {
+      opacity: 1;
+      transform: scale(1.035, 1.035);
+      transition: 0.75s; }
+
+#container-gal {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 90px 40px auto 200px;
+  grid-template-areas: "gheader gheader gheader" "gnav gnav gnav" "gmain gmain gmain" "gfooter gfooter gfooter"; }
+  #container-gal main {
+    grid-area: gmain;
+    background-image: url(https://images4.alphacoders.com/124/thumb-1920-1240054.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    text-align: center; }
+    #container-gal main article {
+      display: inline-block;
+      width: 350px;
+      height: 200px;
+      background-size: cover;
+      opacity: 0.6; }
+      #container-gal main article img {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        max-width: 320px;
+        border-radius: 8px; }
+    #container-gal main article:hover {
+      opacity: 1;
+      transform: scale(1.035, 1.035);
+      transition: 0.75s; }
+
+@media only screen and (min-width: 1024px) {
+  #container-gal main article img {
+    max-width: 350px; } }
+
+#container-ser {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 90px 40px auto 200px;
+  grid-template-areas: "gheader gheader gheader" "gnav gnav gnav" "gmain gmain gmain" "gfooter gfooter gfooter"; }
+  #container-ser main {
+    grid-area: gmain;
+    background-image: url(https://images.alphacoders.com/118/thumb-1920-1188458.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    text-align: center; }
+    #container-ser main article {
+      display: inline-block;
+      width: 350px;
+      height: 500px;
+      background-size: cover;
+      opacity: 0.75; }
+      #container-ser main article img {
+        margin-top: 10px;
+        max-width: 320px;
+        border-radius: 8px; }
+      #container-ser main article h2 {
+        color: #55413c;
+        background-color: #fadfd6;
+        text-shadow: 2px 2px 2px #6b6b6b;
+        max-width: 320px;
+        margin-left: 15px;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        border-top-right-radius: 8px;
+        border-top-left-radius: 8px; }
+      #container-ser main article h2:hover {
+        color: #f58e75;
+        transition: 0.75s; }
+      #container-ser main article p {
+        color: #55413c;
+        font-weight: bold;
+        background-image: linear-gradient(#ffe6dd, #dda08a);
+        text-shadow: 1.2px 1.2px 2px #646464;
+        max-width: 320px;
+        margin-left: 15px;
+        border-bottom-right-radius: 8px;
+        border-bottom-left-radius: 8px; }
+        #container-ser main article p a {
+          text-decoration: none;
+          background-color: #ffc7b3;
+          color: white;
+          padding: 7.5px;
+          font-size: 9pt;
+          font-weight: bold;
+          border-radius: 10px; }
+        #container-ser main article p a:hover {
+          background-color: #fde6de;
+          color: #a07d73; }
+    #container-ser main article:hover {
+      opacity: 1;
+      transform: scale(1.035, 1.035);
+      transition: 0.75s; }
+
+#container-con {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 90px 40px auto 200px;
+  grid-template-areas: "gheader gheader gheader" "gnav gnav gnav" "gmain gmain gmain" "gfooter gfooter gfooter"; }
+  #container-con main {
+    grid-area: gmain;
+    background-image: url(https://images3.alphacoders.com/120/thumb-1920-1206962.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    text-align: center; }
+    #container-con main section {
+      display: inline-block;
+      background-image: linear-gradient(#ffefe9, #dda08a);
+      color: #664c43;
+      text-shadow: 1px 1px 1.5px #414141;
+      margin-left: 5px;
+      margin-right: 5px;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-weight: bold;
+      opacity: 0.75;
+      border-radius: 8px; }
+      #container-con main section img {
+        margin-top: 10px;
+        max-width: 345px; }
+    #container-con main section:hover {
+      opacity: 1; }
+
+#botonContact {
+  border: none;
+  text-decoration: none;
+  background-color: #ffcfbe;
+  color: #99624e;
+  padding: 7.5px;
+  font-size: 9pt;
+  font-weight: bold;
+  border-radius: 10px; }
+
+#botonContact:hover {
+  background-color: #fffaf8;
+  color: #a07d73;
+  transition: 0.75s; }
+
+/* Formato de formulario */
+#formularioContacto {
+  border: none;
+  padding: 6.5px;
+  font-size: 9pt;
+  font-weight: bold;
+  padding-right: 100px;
+  border-radius: 10px; }
+
+/* Formateo del titulo 'Contactanos' */
+#titulo {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+
+#titulo:hover {
+  color: #f58e75;
+  transition: 0.75s; }
+
+@media only screen and (min-width: 1024px) {
+  #container-con main section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-left: 260px;
+    max-width: 60%; }
+    #container-con main section iframe {
+      margin-top: 72.5px; }
+  #container-con main section:hover {
+    opacity: 1; } }
+
+#container-gas {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 90px 40px auto 200px;
+  grid-template-areas: "gheader gheader gheader" "gnav gnav gnav" "gmain gmain gmain" "gfooter gfooter gfooter"; }
+  #container-gas main {
+    grid-area: gmain;
+    background-image: url(https://i.imgur.com/USEgEem.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    text-align: center; }
+    #container-gas main section {
+      display: inline-block;
+      background-image: linear-gradient(#ffefe9, #dda08a);
+      font-weight: bold;
+      color: #583427;
+      width: auto;
+      height: auto;
+      background-size: cover;
+      margin-top: 10px;
+      opacity: 0.75;
+      text-shadow: 1px 1px 2px #525252;
+      margin-bottom: 10px;
+      border-radius: 8px; }
+      #container-gas main section h1 {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+      #container-gas main section h1:hover {
+        color: #f58e75;
+        transition: 0.75s; }
+      #container-gas main section table {
+        color: #583427;
+        text-shadow: 1px 1px 2px #555555;
+        margin: auto; }
+    #container-gas main section:hover {
+      opacity: 1; }
+
+/* */
+#botonGast {
+  text-decoration: none;
+  background-color: #eebfae;
+  color: white;
+  font-weight: bold;
+  padding: 7.5px;
+  font-size: 11pt;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-shadow: 1px 1px 2px black; }
+
+#botonGast:hover {
+  background-color: white;
+  color: #383838; }
+
+@media only screen and (min-width: 1024px) {
+  #container-gas main section {
+    width: 60%;
+    height: auto; } }
+
+#container-coc {
+  font-family: 'Montserrat', sans-serif;
+  display: grid;
+  grid-template-columns: 20px auto 20px;
+  grid-template-rows: 90px 40px auto 200px;
+  grid-template-areas: "gheader gheader gheader" "gnav gnav gnav" "gmain gmain gmain" "gfooter gfooter gfooter"; }
+  #container-coc main {
+    grid-area: gmain;
+    background-image: url(https://images7.alphacoders.com/354/thumb-1920-354413.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    width: 100%;
+    text-align: center; }
+    #container-coc main article {
+      display: inline-block;
+      background-image: linear-gradient(#ffefe9, #dda08a);
+      color: #583427;
+      width: 320px;
+      height: auto;
+      background-size: cover;
+      margin-top: 10px;
+      opacity: 0.75;
+      text-shadow: 2px 2px 4px #525252;
+      margin-bottom: 10px;
+      border-radius: 8px; }
+      #container-coc main article h1 {
+        color: #583427;
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif; }
+      #container-coc main article h1:hover {
+        color: #f58e75;
+        transition: 0.75s; }
+      #container-coc main article p {
+        font-weight: bolder;
+        color: #583427;
+        text-shadow: 1px 1px 2px #685d59; }
+    #container-coc main article:hover {
+      opacity: 1; }
+
+/* */
+#botonCoct {
+  text-decoration: none;
+  background-color: #dca591;
+  color: white;
+  font-weight: bold;
+  padding: 7.5px;
+  font-size: 9pt;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  text-shadow: 1px 1px 2px black; }
+
+#botonCoct:hover {
+  background-color: white;
+  color: #4b3831; }
+
+@media only screen and (min-width: 1024px) {
+  #container-coc main article {
+    display: inline-block;
+    background-color: #ffd5c6;
+    color: #583427;
+    width: 60%;
+    height: auto;
+    background-size: cover;
+    margin-top: 10px;
+    text-shadow: 2px 2px 4px #525252;
+    margin-bottom: 10px; } }
